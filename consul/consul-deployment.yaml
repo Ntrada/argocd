@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-gateway
+  name: consul
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: api-gateway
+      app: consul
   template:
     metadata:
       labels:
-        app: api-gateway
+        app: consul
     spec:
       containers:
-      - image: docker.io/wahlgrena/api-gateway:2
-        name: api-gateway
+      - image: docker.io/wahlgrena/api-gateway:1
+        name: consul
         ports:
         - containerPort: 80
