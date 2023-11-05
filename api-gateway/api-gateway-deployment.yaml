@@ -14,7 +14,7 @@ spec:
         app: api-gateway
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+      - image: api-gateway:1
         name: api-gateway
         ports:
         - containerPort: 80
