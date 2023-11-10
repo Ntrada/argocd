@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: api-gateway
 spec:
-  replicas: 3
+  replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
         app: api-gateway
     spec:
       containers:
-      - image: docker.io/wahlgrena/api-gateway:2
+      - image: docker.io/wahlgrena/api-gateway:latest
         name: api-gateway
         ports:
         - containerPort: 80
