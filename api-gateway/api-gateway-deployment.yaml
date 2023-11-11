@@ -16,7 +16,7 @@ spec:
         app: api-gateway
     spec:
       containers:
-      - image: docker.io/wahlgrena/api-gateway:latest
+      - image: docker.io/wahlgrena/api-gateway:develop
         name: api-gateway
         ports:
         - containerPort: 80
