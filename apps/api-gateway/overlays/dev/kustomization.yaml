@@ -6,7 +6,7 @@ namePrefix: dev-
 
 resources:
 - ingress.yaml
-- ../../../base
+- ../..base
 
 namespace: dev
 labels:
