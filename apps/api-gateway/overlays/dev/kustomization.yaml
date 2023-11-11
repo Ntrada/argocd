@@ -12,5 +12,5 @@ labels:
     app: api-gateway
     env: dev
 patches:
-- path: ingress.yaml
+- path: deployment.yaml
 
