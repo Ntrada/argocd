@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway-deployment
+spec:
+  selector:
+    matchLabels:
+      name: api-gateway
+  template:
+    metadata:
+      labels:
+        name: api-gateway
+    spec:
+      containers:
+        - name: api-gateway
+          image: docker.io/wahlgrena/api-gateway:develop          
+          resources:
+            limits:
+              cpu: "1000m"
+              memory: "512Mi"
+            requests:
+              cpu: "100m"
+              memory: "512Mi"
+          ports:
+            - containerPort: 8080
+              name: app-port
+          envFrom:
+            - configMapRef:
+                name: gateway-config
