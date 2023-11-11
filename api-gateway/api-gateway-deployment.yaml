@@ -5,6 +5,8 @@ metadata:
 spec:
   replicas: 1
   revisionHistoryLimit: 3
+  imagePullSecrets:
+      - name: regcred
   selector:
     matchLabels:
       app: api-gateway
@@ -14,7 +16,7 @@ spec:
         app: api-gateway
     spec:
       containers:
-      - image: ghcr.io/ntrada/klassresan:sha256-98edfe090f3625af0065b258729314a85f1ea2abb06aa0c2b88df5fc863bc985.sig
+      - image: docker.io/wahlgrena/api-gateway:latest
         name: api-gateway
         ports:
         - containerPort: 80
