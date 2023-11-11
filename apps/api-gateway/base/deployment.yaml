@@ -3,12 +3,10 @@ kind: Deployment
 metadata:
   name: api-gateway
 spec:
-  template:
-    metadata:
-      labels:
-        app: api-gateway
+  template:    
     spec:
       containers:
+      - name: api-gateway
       - image: docker.io/wahlgrena/api-gateway:develop        
         ports:
         - containerPort: 80

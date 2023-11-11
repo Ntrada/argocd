@@ -5,6 +5,4 @@ metadata:
 spec:	
   ports:	
   - port: 80	
-    targetPort: 80	
-  selector:	
-    app: api-gateway
+    targetPort: 80
