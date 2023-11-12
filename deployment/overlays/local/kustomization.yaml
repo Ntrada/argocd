@@ -11,5 +11,5 @@ configMapGenerator:
 labels:
 - includeSelectors: true
   pairs:
-    environment: docker
+    environment: local
 
