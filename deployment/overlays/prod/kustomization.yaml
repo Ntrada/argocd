@@ -1,26 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-commonLabels:
-  environment: production
-nameSuffix: -prod
-
+namePrefix: prod-
 resources:
-  - ../../base
-
-patchesStrategicMerge:
-  - user-service/hpa-patch.yaml
-  - api-gateway/ingress-patch.yaml
-
+- ../../base
 
 configMapGenerator:
-  - name: us-config
-    envs:
-      - user-service/config/config.properties
-  - name: gateway-config
-    envs:
-      - api-gateway/config/config.properties
+- envs:
+  - api-gateway/config/config.properties
+  name: gateway-config
+labels:
+- includeSelectors: true
+  pairs:
+    environment: prod
 
-secretGenerator:
-  - name: us-secrets
-    envs:
-      - user-service/config/secret.properties

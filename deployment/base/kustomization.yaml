@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - api-gateway/deployment.yaml
   - api-gateway/cluster-ip.yaml  
+  - api-gateway/ingress.yaml
   - api-gateway/hpa.yaml
 
 images:
