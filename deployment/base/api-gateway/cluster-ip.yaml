@@ -8,10 +8,7 @@ spec:
   type: ClusterIP
   ports:
     - name: app-port
-      port: 8080
+      port: 80
       targetPort: 8080
-    - name: monitoring-port
-      port: 9000
-      targetPort: 9000
   selector:
     name: api-gateway
