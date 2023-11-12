@@ -6,9 +6,6 @@ resources:
   - api-gateway/cluster-ip.yaml
   - api-gateway/ingress.yaml
   - api-gateway/hpa.yaml
-  - user-service/deployment.yaml
-  - user-service/cluster-ip.yaml
-  - user-service/hpa.yaml
 
 images:
   - name: zalerix/kustomize-article-gw:latest
