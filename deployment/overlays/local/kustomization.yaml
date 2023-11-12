@@ -12,5 +12,4 @@ labels:
 - includeSelectors: true
   pairs:
     environment: local
-patches:
-- path: api-gateway/ingress-patch.yaml
+
