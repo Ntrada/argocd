@@ -10,4 +10,4 @@ resources:
 images:
   - name: wahlgrena/api-gateway:develop
     newName: wahlgrena/api-gateway
-    newTag: 1.0.1
+    #newTag: 1.0.1
