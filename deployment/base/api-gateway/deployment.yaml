@@ -13,7 +13,17 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: docker.io/wahlgrena/api-gateway:develop          
+          image: zalerix/kustomize-article-gw:latest
+          livenessProbe:
+            initialDelaySeconds: 10
+            httpGet:
+              port: 9000
+              path: /actuator/health/liveness
+          readinessProbe:
+            initialDelaySeconds: 10
+            httpGet:
+              port: 9000
+              path: /actuator/health/readiness
           resources:
             limits:
               cpu: "1000m"
@@ -24,6 +34,8 @@ spec:
           ports:
             - containerPort: 8080
               name: app-port
+            - containerPort: 9000
+              name: actuator-port
           envFrom:
             - configMapRef:
                 name: gateway-config
