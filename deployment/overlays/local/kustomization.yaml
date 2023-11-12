@@ -11,6 +11,6 @@ configMapGenerator:
 labels:
 - includeSelectors: true
   pairs:
-    environment: docker
+    environment: local
 patches:
 - path: api-gateway/ingress-patch.yaml
