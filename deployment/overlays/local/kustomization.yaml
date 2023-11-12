@@ -3,7 +3,6 @@ kind: Kustomization
 namePrefix: docker-
 resources:
 - ../../base
-- api-gateway/ingress-patch.yaml
 
 configMapGenerator:
 - envs:
@@ -13,4 +12,5 @@ labels:
 - includeSelectors: true
   pairs:
     environment: docker
-
+patches:
+- path: api-gateway/ingress-patch.yaml
