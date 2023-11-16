@@ -11,11 +11,6 @@ configMapGenerator:
 labels:
 - includeSelectors: true
   pairs:
-    environment: local
+    environment: dev
 patches:
 - path: api-gateway/ingress-patch.yaml
-
-images:
-  - name: wahlgrena/api-gateway:develop
-    newName: wahlgrena/api-gateway
-    newTag: dev
