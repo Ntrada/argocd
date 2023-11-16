@@ -14,3 +14,8 @@ labels:
     environment: local
 patches:
 - path: api-gateway/ingress-patch.yaml
+
+images:
+  - name: wahlgrena/api-gateway:local
+    newName: wahlgrena/api-gateway
+    newTag: local
