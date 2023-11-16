@@ -8,6 +8,6 @@ resources:
   - api-gateway/hpa.yaml
 
 images:
-  - name: wahlgrena/api-gateway:latest
+  - name: wahlgrena/api-gateway:develop
     newName: wahlgrena/api-gateway
     newTag: develop
